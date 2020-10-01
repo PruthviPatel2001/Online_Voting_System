@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    
+}
+header{
+    position: relative;
+    text-align: center;
+    width: auto;
+    background-color:#133b5c;
+    height: 73px;
+    padding-top: 24px;
+    grid-area: header;
+
+}
+body{
+    background-color: #FAD961; 
+    
+}
+.navbar{
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    background-color:#525252;
+    
+    
+}
+
+
+#navbar{
+    position: relative;
+    top: 5px;
+    
+    margin: auto;
+    border-radius: 12px;
+   
+}
+.navbar li{
+
+    
+    display: inline-block;
+    
+    
+    right: 45px;
+    margin: 10px 29px;
+    list-style: none;
+    
+}
+.navbar li a{
+    position: relative;
+    right: 30px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color:#e8e8e8;
+
+}
+.navbar li a:hover{
+    color:#ff4b5c;
+    cursor: pointer;
+}
+
+.singup{
+    position: relative;
+    background-color: #FEE140;
+    background-image: linear-gradient(180deg, #ffee8d 40%, #ff8cae 110%);
+    left: 470px;
+    border: 1px solid black;
+    border-radius: 14px;
+    box-shadow:  -10px 14px 14px #414141;;
+    top: 97px;
+    width: 625px;
+    height: 565px;
+}
+ form{
+    font-size: 21px;
+    padding: 41px 116px;
+    
+}
+.singup input{
+    margin: 8px 0px;
+    border: none;
+    border-bottom: 2px solid red;
+    outline: none;
+    background: none;
+       
+}
+.singup p{
+    display: inline-block;
+    color:#444144;
+    font-family: 'Overpass', sans-serif;
+}
+
+#dd{
+    position: relative;
+    left: 108px;
+}
+
+#fn{
+    position: relative;
+    left: 60px;
+}
+      
+
+#ln{
+    position: relative;
+    left: 63px;
+}
+
+
+#age{
+    position: relative;
+    left: 126px;
+}
+
+
+#gender{
+    position: relative;
+    left: 93px;
+}
+
+
+#adh{
+    position: relative;
+    left: 22px;
+}
+
+
+#vi{
+    position: relative;
+    left: 84px;
+}
+
+#cnt{
+    position: relative;
+    left: 64px;
+}
+#pass{
+    position: relative;
+    left: 40px;
+}
+
+.gender
+{
+    position: relative;
+    left: 95px;
+}
+
+footer{
+    background-color: #133b5c;
+    position: relative;
+    top: 130px;
+    height: 100px;
+}
+.btn{
+    
+    position: relative;
+    top: 32px;
+    z-index: 1;
+    left: 106px;
+    width: 110px;
+     border-radius: 10px;
+     height: 36px;
+    
+}
+h1 {
+    position: relative;
+    top: 45px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Overpass', sans-serif;
+    color: #272829;
+    
+    
+}
+h3{
+    display: inline-block;
+    position: relative;
+    top: 57px;
+    left:542px;
+    font-size: 40px;
+    font-family: 'Overpass', sans-serif;
+    color: #313538;
+    border-bottom:2px solid #d32436;
+    
+}

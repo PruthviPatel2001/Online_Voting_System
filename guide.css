@@ -1,0 +1,39 @@
+.guideline{
+ position: relative;
+ top: 106px;
+ left: 274px;
+ margin-top: 58px;
+ height: 370px;
+ background-color: #facc6b;
+background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
+ 
+ border: 2px solid red;
+ box-shadow: -4px -4px 20px red;
+}
+
+footer{
+    margin-top: -214px;
+    position: relative;
+    top: 416px;
+    height: 100px;
+}
+.container p{
+    display: inline-block;
+    position: relative;
+    left: 125px;
+    margin-top: 14px;
+    text-align: center;
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+}
+ .title{
+    font-size: 26px;
+    color: blueviolet;
+}
+span{
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-size: 22px;
+}

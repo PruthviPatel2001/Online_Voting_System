@@ -1,0 +1,238 @@
+
+*{
+    margin: 0%;
+}
+header{
+    position: relative;
+    text-align: center;
+    width: auto;
+    background-color:#133b5c;
+    height: 73px;
+    padding-top: 24px;
+    grid-area: header;
+
+}
+.container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'header header header header'
+     'section section section form'  
+     'footer footer footer footer ';
+     background-color: #FAD961; 
+    
+}
+
+.navbar{
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    background-color:#525252;
+    
+    
+}
+
+
+#navbar{
+    position: relative;
+    top: 5px;
+    
+    margin: auto;
+    border-radius: 12px;
+   
+}
+
+#section{
+    grid-area: section;
+    position: relative;
+    top:50px;
+    left: 50px;
+    width: 800px;
+    height: 556px;
+    border: 2px solid #838383 ;
+    box-shadow: -4px -4px 10px #414141;
+    background-color: #fff000;
+background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%); 
+
+    
+}
+
+
+#form
+{
+    grid-area: form;
+    position: relative;
+    top:50px;
+    right: 30px;
+    width: 450px;
+    border: 2px solid #838383 ;
+    box-shadow: -4px -4px 10px #414141;
+    
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+
+
+    
+}
+
+
+
+#footer{
+    grid-area: footer ;
+    position: relative;
+    top: 50px;
+    height:100px;
+    text-align: center;
+    background-color:#133b5c;
+    color: #fcdab7;
+    padding-top: 29px;
+    font-size: 20px;
+    
+}
+.navbar li{
+
+    
+    display: inline-block;
+    
+    
+    right: 45px;
+    margin: 10px 29px;
+    list-style: none;
+    
+}
+.navbar li a{
+    position: relative;
+    right: 30px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color:#e8e8e8;
+
+}
+.navbar li a:hover{
+    color:#ff4b5c;
+    cursor: pointer;
+}
+
+.form form{
+    padding: 75px 47px;
+    margin: 60px;
+    margin-left: 81px;
+    
+}
+.form button{
+
+    margin: 5px 5px;
+    padding: 5px 9px;
+}
+.form a{
+    text-decoration: none;
+    margin: 0px 18px;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    position: relative;
+    top: -121px;
+    left: 105px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:#ff004d;
+    color: honeydew;
+}
+.form a:hover{
+    color: #fc575e;
+    background-color: white;
+    border: 4px solid #fc575e ;
+}
+.form input{
+    outline: none;
+    background:none;
+    
+    border: none;
+    border-bottom:2px solid #363636;
+}
+.form input:hover{
+    outline: none;
+    border-bottom:4px solid #f74039;
+    
+}
+.form p{
+    font-size: 18px;
+    font-family: 'Overpass', sans-serif;
+    color: #363636;
+}
+.form h1{
+    position: relative;
+    left:-14px;
+    color: #2b2828;
+    font-family: 'Overpass', sans-serif;
+}
+
+
+.party{
+    display: inline-block;
+    padding: 4px 5px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 1px solid black;
+    box-shadow: -4px -4px 10px #414141;
+    background-color: white;
+}
+header img{
+    position: absolute;
+    top: 0px;
+    left: 131px;
+    height: 91px;
+    border: 3px solid #df029c;
+    box-shadow: -4px -4px 30px #df029c;
+}
+
+
+#bjp{
+    position: relative;
+    left: 77px;
+    top: 40px;
+    box-shadow: -4px -4px 20px #2c2b2b;
+}
+
+#congress{
+    position: relative;
+    left: 266px;
+    top: 40px;
+    box-shadow: -4px -4px 20px #2c2b2b;
+}
+#aap{
+    position: relative;
+    left: -356px;
+    top: 311px;
+    box-shadow: -4px -4px 20px #2c2b2b;
+
+}
+#aapimg{
+    position: relative;
+    left: 18px;
+}
+#cpi{
+    position: relative;
+    left: 480px;
+    top: 99px;
+    box-shadow: -4px -4px 20px #2c2b2b;
+
+}
+.party img{
+    position: relative;
+    left: 40px;
+    height: 110px;
+}
+.party p{
+    position: relative;
+    left: 75px;
+    top: 10px;
+}
+.party h4{
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+ 
