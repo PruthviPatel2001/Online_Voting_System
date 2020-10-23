@@ -1,3 +1,33 @@
+<?php
+include ("dbcon.php");
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($con,$_POST['id']);
+      $mypassword = mysqli_real_escape_string($con,$_POST['password']); 
+      
+      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+      $result = mysqli_query($con,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+		
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: login.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,17 +96,17 @@
 
         <div class="form" id="form">
 
-            <form>
+            <form action="" method ="post">
                 <h1>Login to Vote</h1>
                 <br>
 
                 <p>Voter Id No:</p>
 
-                <input type="text" value="" placeholder="Enter 10 digit No.">
+                <input type="text" name="id" value="" placeholder="Enter 10 digit No.">
                 <br>
                 <br>
                 <p>Password:</p>
-                <input type="text" value="" placeholder="Enter Password">
+                <input type="password" name="pass" value="" placeholder="Enter Password">
                 <br>
                 <br>
 
