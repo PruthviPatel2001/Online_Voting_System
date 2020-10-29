@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="signin.css">
     <link rel="stylesheet" href="about_us.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500&display=swap" rel="stylesheet">
@@ -69,6 +69,7 @@
 
     </div>
     <footer>
+        
         <p>    </p>
     </footer>
     

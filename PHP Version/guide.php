@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="singin.css">
     <link rel="stylesheet" href="guide.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">

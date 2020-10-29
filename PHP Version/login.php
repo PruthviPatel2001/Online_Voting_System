@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting system</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="singin.css">
     <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,600&display=swap" rel="stylesheet">
@@ -40,17 +40,19 @@
                 <p>Aadhar No. :</p>
                 <p>Voted :</p>
                 <p>Voted To :</p>
-
-                
-
-
-               
-
-                
-                
+    
                  
             </form>
-
+            <a href="main.php" id="signout" style="
+                   color: red;
+                   text-decoration: none;
+                   position: relative;
+                   bottom: 183px;
+                   left: 170px;
+                   border: 2px solid;
+                   padding: 11px;
+                   width: 94px;
+               ">Sign Out </a>
             
 
         </div>
