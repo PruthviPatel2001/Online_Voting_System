@@ -1,3 +1,18 @@
+<?php 
+session_start();
+include ("dbcon.php");
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
+$idtemp=$_SESSION["voterid"];
+
+$sql = "SELECT firstname,lastname,dob,age,gender,contactno,aadharno,voterid FROM registration";
+$result = $con->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +46,22 @@
             <form>
                 <h3>User Details</h3>
                 <br>
-                
-                <p>Full-Name :</p>
-                <p>Voter Id :</p>
-                <p>D.O.B :</p>
-                <p>Gender :</p>
-                <p>Contact No. :</p>
-                <p>Aadhar No. :</p>
-                <p>Voted :</p>
-                <p>Voted To :</p>
+				<?php
+                if (mysqli_num_rows($result) > 0) {
+					// output data of each row 
+					while($row = mysqli_fetch_assoc($result)) {
+						if($idtemp==$row["voterid"]){
+						echo "Full-Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+						echo "Voter id:". $row["voterid"]."<br>";
+						echo "D.O.B:". $row["dob"]."<br>";
+						echo "Gender:". $row["gender"]."<br>";
+						echo "Contact No:". $row["contactno"]."<br>";
+						echo "Aadhar No:". $row["aadharno"]."<br>";
+						echo "Voted"."<br>";
+						echo "Voted to"."<br>";
+						}}
+					}
+				?>
     
                  
             </form>

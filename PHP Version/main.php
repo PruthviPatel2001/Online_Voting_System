@@ -1,13 +1,10 @@
 <?php
 include ("dbcon.php");
-// Define variables and initialize with empty values
 $voterid = $password = "";
 $voterid_err = $password_err = "";
 
-// Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-	// Check if voterid is empty
 	if(empty(trim($_POST["voterid"]))){
 		$voterid_err = "Please enter id.";
     } else{
@@ -152,14 +149,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 <p>Password:</p>
                 <input type="password" name="password" value="" placeholder="Enter Password">
                 <br>
-                
+                <br>
                 <span style=" color:#d72323; font-size: 1.2rem; background-color:#eae1e1;margin:-24px;"> 
                 <?php echo $password_err;?> 
                 </span>
-
-                <br><br>
-
+                <br><br><br><br>
+				<br><br><br><br>
 				<a id ="lns" href=""><input id="submitlogin" type="submit" value="Login"/></a>
+				<br><br>
                 <a id="lns" href="singin.php">Sing In</a>
 
             </form>
