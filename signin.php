@@ -121,12 +121,12 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
 
     </header>
     
-    <h1>Sing-In Form</h1>  
+    <h1>Sign-In Form</h1>  
     <h3>Fill the form to register</h3>    
 
     <div class="container">
-        <div class="singup">                  
-               <form action="singin.php"  method='POST'>
+        <div class="signup">                  
+               <form action="signin.php"  method='POST'>
 
                    <p>First Name:</p>
                    <a id="fn"><input type="text" name="fname" id="" placeholder=" Enter First name"></a>
