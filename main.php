@@ -178,17 +178,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
                 <input type="text" name="voterid" value="" placeholder="Enter 10 digit No.">
                 <br>
-
-                <span style=" color:red; font-size: 1.2rem; background-color:#eae1e1;margin: -64px;"> 
-                <?php  echo $voterid_err;?> 
+                <span style=" color:red; font-size: 1.2rem; background-color:#eae1e1;margin:-74px;position: relative;top: 5px;left:36px;"> 
+               <?php  echo $voterid_err;?> 
                 </span>
 
                 <br><br>
+
                 <p>Password:</p>
                 <input type="password" name="password" value="" placeholder="Enter Password">
                 <br>
-                
-                <span style=" color:#d72323; font-size: 1.2rem; background-color:#eae1e1;margin: -100px; position: relative;top: 5px;left: 19px;"> 
+                <span style=" color:#d72323; font-size: 1.2rem; background-color:#eae1e1;margin: -110px; position: relative;top: 5px; left:40px"> 
                 <?php echo $password_err;?> 
                 </span>
                 <br><br>
