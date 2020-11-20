@@ -1,0 +1,119 @@
+
+#form
+{
+    grid-area: form;
+    position: relative;
+    margin-bottom: -42px;
+    z-index: 1;
+    top:72px;
+    right: 903px;
+    width: 450px;
+    border: 2px solid #838383 ;
+    box-shadow: -4px -4px 10px #414141;
+    height: 514px;
+    background-color: #fbb034;
+background-image: linear-gradient(315deg, #ffa920 40%, #ffdd00 74%);
+}
+.form h3{
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid rgba(214, 16, 214, 0.856);
+    
+    font-size: 25px;
+    position: relative;
+   
+    left: 7px;
+    top: -111px;
+    color: #2b2828;
+    height: 42px;
+    font-family: 'Overpass', sans-serif;
+}
+
+
+
+.form p{
+    position: relative;
+    bottom: 73px;
+    right: 91px;
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-family: 'Overpass', sans-serif;
+    color: #fc1d1d;
+    width: 390px;
+}
+
+.form p span{
+    color: #6d6d6d;
+}
+
+#sign-out{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    bottom: 183px;
+    left: 170px;
+    border: 2px solid red;
+    padding: 11px;
+    width: 94px;
+    background-color: #f9484a;
+}
+
+#sign-out:hover{
+    color:red ;
+    background-color: white;
+}
+
+footer{
+    position:relative;
+    top: 173px !important;
+    height: 100px;
+}
+#section{
+    position: relative;  
+    left: 646px;
+    background-color: #f9484a;
+background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+}
+.party button{
+    position: relative;
+    top: 27px;
+    left: 56px;
+    width: 83px;
+    height: 29px;
+    border-radius: 10px;
+    color: #fa000cfd;
+}
+.party button:hover{
+    background-color: #fc575e;
+    color: white;
+}
+
+.party input{
+    background-color: #f9484a;
+    color: white;
+    border: 2px solid yellow;
+    width: 90px;
+    height: 26px;
+    font-size: 18px;
+    position: relative;
+    bottom: 10px;
+}
+
+.party input:hover{
+    border: 2px solid #f9484a;
+    background-color: white;
+    color: #fc1d1d;
+    cursor: pointer;
+}
+
+.warn{
+    color: red;
+    text-align: center;
+    position: relative;
+    left: 895px;
+    top: 34px;
+    height: 22px;
+    font-size: 24px;
+    font-family: 'Cairo', sans-serif;
+    
+}
