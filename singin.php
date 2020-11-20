@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
-    <link rel="stylesheet" href="design.css">
-    <link rel="stylesheet" href="singin.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/singin.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <?php
-    
+$ageerr=$voteriderr=$contacterr=$aadharerr="";
     include 'dbcon.php';
    
-    $fname=$lname=$dob=$age=$gender=$contact=$addhar=$voterid=$password='';
+    $fname=$lname=$dob=$age=$gender=$contact=$aadhar=$voterid=$password='';
 
     
     if(isset($_POST['submit'])){
@@ -32,7 +33,7 @@
 
         $contact= mysqli_real_escape_string ($con,$_POST['contact']);
 
-        $addhar= mysqli_real_escape_string ($con,$_POST['aadaharno']);
+        $aadhar= mysqli_real_escape_string ($con,$_POST['aadhar']);
 
         $voterid= mysqli_real_escape_string ($con,$_POST['voterid']);
 
@@ -54,12 +55,12 @@
         
         else{
 
-            if($age>=18){
+            if($age>=18  && strlen($voterid)==10 && strlen($contact)==10 && strlen($aadhar)==12){
 
                 $insertquery="insert into registration ( firstname, lastname, dob, age, 
-                gender, conatctNo, aadharno, voterid, password) 
+                gender, contactno, aadharno, voterid, password) 
                 values('$fname','$lname','$dob',' $age','$gender',
-                '$contact','$addhar','$voterid','$pass')";
+                '$contact','$aadhar','$voterid','$pass')";
 
                 $iquery= mysqli_query($con,$insertquery);
 
@@ -85,8 +86,18 @@
     
 
             }
-            else{
-                echo ("you have to be 18+ to vote.");
+            
+            if($age<18){
+                 $ageerr="*Age should be 18+"; ;
+            }
+			if(strlen($voterid)!=10){
+                 $voteriderr="*Voter I.D Should be of 10 Digit";
+            }
+			if(strlen($contact)!=10){
+                 $contacterr="*Contact NO. Should be of 10 Digit";
+            }
+			if(strlen($aadhar)!=12){
+                $aadharerr="*Aadhar NO. Should be of 12 Digit ";
             }
         }
     
@@ -118,23 +129,26 @@
                <form action="singin.php"  method='POST'>
 
                    <p>First Name:</p>
-                   <a id="fn"><input type="text" name="fname" id="" placeholder=" Enter First name" required></a>
+                   <a id="fn"><input type="text" name="fname" id="" placeholder=" Enter First name"></a>
                    <br>
                    <br>
 
                    <p>Last Name: </p>
                 
-                   <a id="ln"><input type="text" name="lname" id="" placeholder="Enter Last name" required></a>
+                   <a id="ln"><input type="text" name="lname" id="" placeholder="Enter Last name"></a>
                    <br>
                    <br>
                    
                     <p>D.O.B :</p>
-                   <a id="dd"><input type="date" name="dob" id="" placeholder="Enter DOB" required></a>
+                   <a id="dd"><input type="date" name="dob" id="" placeholder="Enter DOB"></a>
                    <br>
                    <br>
                    
                     <p>Age:</p>
-                    <a id="age"><input type="text" name="age" id="" placeholder="Enter Age" required></a>
+                    <a id="age"><input type="text" name="age" id="" placeholder="Enter Age"></a>
+                    <span id="err1"><?php
+                       echo $ageerr;
+                    ?></span>
                    <br>
                    <br>
 
@@ -152,22 +166,31 @@
                    <br>
                    <br>
                    <p>Contact No:</p>
-                   <a id="cnt"><input type="tel" name="contact" id="" placeholder="Enter 10 digit No." required></a>
+                   <a id="cnt"><input type="tel" name="contact" id="" placeholder="Enter 10 digit No."></a>
+                    <span id="err2"><?php 
+                      echo $contacterr;
+                   ?></span>
                    <br>
                    <br>
 
                    <p>Aadhar Card No.</p>
-                   <a id="adh"><input type="number" name="aadaharno" id="" placeholder="Enter 12 digit No." required></a>
+                   <a id="adh"><input type="number" name="aadhar" id="" placeholder="Enter 12 digit No."></a>
+                   <span id="err3"><?php
+                      echo $aadharerr;
+                   ?></span>
                    <br>
                    <br>
 
                    <p>Voter I.D:</p>
-                   <a id="vi"><input type="number" name="voterid" id="" placeholder="Enter 10 digit No." required></a>
+                   <a id="vi"><input type="number" name="voterid" id="" placeholder="Enter 10 digit No."></a>
+                   <span id="err4"><?php
+                      echo $voteriderr;
+                   ?></span>
                    <br>
                    <br>
 
                    <p>Set password:</p>
-                   <a id="pass"><input type="text" name="pass" id="" placeholder="Set- Password" required></a>
+                   <a id="pass"><input type="password" name="pass" id="" placeholder="Set- Password"></a>
     
                     <button class="btn" type='submit' name='submit'>Register</button>
                     

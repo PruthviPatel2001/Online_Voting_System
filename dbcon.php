@@ -6,15 +6,3 @@ $password="";
 $db="signin";
 
 $con=mysqli_connect($server,$user,$password,$db);
-
-if(!$con){
-    ?>
-
-    <script>
-        alert("connection unsucessfull");
-    </script>
-    <?php
-    
-}
-
-?>

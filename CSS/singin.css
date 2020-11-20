@@ -62,19 +62,20 @@ body{
     position: relative;
     background-color: #FEE140;
     background-image: linear-gradient(180deg, #ffee8d 40%, #ff8cae 110%);
-    left: 470px;
+    left: 412px;
     border: 1px solid black;
     border-radius: 14px;
     box-shadow:  -10px 14px 14px #414141;;
     top: 97px;
-    width: 625px;
-    height: 565px;
+    width: 705px;
+    height: 610px;
 }
+
  form{
     font-size: 21px;
-    padding: 41px 116px;
-    
+    padding: 41px 51px;   
 }
+
 .singup input{
     margin: 8px 0px;
     border: none;
@@ -87,6 +88,51 @@ body{
     display: inline-block;
     color:#444144;
     font-family: 'Overpass', sans-serif;
+}
+
+#err1 {
+    color: #d32436 !important;
+    background-color: beige;
+    display: inline-block !important;
+    font-size: 18px;
+    left: 143px;
+    position: relative;
+    width: 158px;
+
+}
+
+#err2 {
+    color: #d32436 !important;
+    background-color: beige;
+    display: inline-block !important;
+    font-size: 18px;
+    left: 73px;
+    
+    position: relative;
+    width: 281px;
+
+}
+#err3 {
+    color: #d32436 !important;
+    background-color: beige;
+    display: inline-block !important;
+    left: 28px;
+    top: 7px;
+    font-size: 18px;
+    position: relative;
+    width: 267px;
+
+}
+
+#err4 {
+    color: #d32436 !important;
+    background-color: beige;
+    display: inline-block !important;
+    font-size: 18px;
+    left: 98px;
+    position: relative;
+    width: 243px;
+
 }
 
 #dd{
@@ -151,15 +197,24 @@ footer{
     height: 100px;
 }
 .btn{
-    
     position: relative;
-    top: 32px;
+    position: relative;
+    top: 107px;
     z-index: 1;
-    left: 106px;
+    left: -84px;
     width: 110px;
-     border-radius: 10px;
-     height: 36px;
-    
+    border-radius: 10px;
+    height: 36px;
+    background-color: #ff4b5c;
+    border: 2px solid bisque;
+    color: white;
+    font-size: 18px;   
+}
+
+.btn:hover{
+    background-color: white;
+    color: #ff4b5c;
+    border: 2px solid #ff4b5c;
 }
 h1 {
     position: relative;

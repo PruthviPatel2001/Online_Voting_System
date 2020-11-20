@@ -6,13 +6,13 @@ $voterid_err = $password_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	if(empty(trim($_POST["voterid"]))){
-		$voterid_err = "Please enter id.";
+		$voterid_err = "*Please enter id.";
     } else{
         $voterid = trim($_POST["voterid"]);
 	}
 // Check if password is empty
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
+        $password_err = "*Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -48,12 +48,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                             header("location: login.php");
                         } else{
                             // Display an error message if password is not valid
-                            $password_err = "The password you entered was not valid.";
+                            $password_err = "*The password you entered was not valid.";
                         }
                     }
                 } else{
                     // Display an error message if voterid doesn't exist
-                    $voterid_err = "No account found with that voter id.";
+                    $voterid_err = "*No account found with that voter id.";
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -63,9 +63,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             mysqli_stmt_close($stmt);
         }
     }
-
-    // Close connection
-    mysqli_close($con);
 }
 ?>
 
@@ -77,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="CSS/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;800&display=swap" rel="stylesheet">
 </head>
@@ -109,8 +106,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 				<?php
 				$sql = "SELECT Name,total_vote FROM votes";
 				$result = $con->query($sql); 
-				if (mysqli_num_rows($result) > 0) {
-					while($row = mysqli_fetch_assoc($result)) {
+				if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()) {
 					if($row["Name"]=="bjp"){
 					    echo $row["total_vote"];
 				}}}
@@ -177,7 +174,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 <input type="text" name="voterid" value="" placeholder="Enter 10 digit No.">
                 <br>
 
-                <span style=" color:red; font-size: 1.2rem; background-color:#eae1e1;margin: 26px;"> 
+                <span style=" color:red; font-size: 1.2rem; background-color:#eae1e1;margin: -64px;"> 
                 <?php  echo $voterid_err;?> 
                 </span>
 
@@ -185,14 +182,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 <p>Password:</p>
                 <input type="password" name="password" value="" placeholder="Enter Password">
                 <br>
-                <br>
-                <span style=" color:#d72323; font-size: 1.2rem; background-color:#eae1e1;margin:-24px;"> 
+                
+                <span style=" color:#d72323; font-size: 1.2rem; background-color:#eae1e1;margin: -100px; position: relative;top: 5px;left: 19px;"> 
                 <?php echo $password_err;?> 
                 </span>
-                <br><br><br><br>
-				<br><br><br><br>
+                <br><br>
 				<a id ="lns" href=""><input type="submit" value="Login"/></a>
-				<br><br>
+				
                 <a id="lns" href="singin.php">Sing In</a>
 
             </form>

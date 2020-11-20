@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
-    <link rel="stylesheet" href="design.css">
-    <link rel="stylesheet" href="signin.css">
-    <link rel="stylesheet" href="about_us.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/signin.css">
+    <link rel="stylesheet" href="CSS/about_us.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
 
@@ -16,9 +16,9 @@
         <img src="images\\ecoi.png" alt="">
         <div class="navbar" id="navbar">
             <ul>
-                <li> <a href="main.html"> Home </a> </li>
-                <li> <a href="about_us.html">About Us </a> </li>
-                <li> <a href="guide.html"> Guide</a> </li>
+                <li> <a href="main.php"> Home </a> </li>
+                <li> <a href="about_us.php">About Us </a> </li>
+                <li> <a href="guide.php"> Guide</a> </li>
     
             </ul>
     
@@ -69,6 +69,7 @@
 
     </div>
     <footer>
+        
         <p>    </p>
     </footer>
     

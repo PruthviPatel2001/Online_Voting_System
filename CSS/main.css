@@ -17,10 +17,10 @@ header{
     grid-gap: 1rem;
     grid-template-areas:
     'header header header header'
-     'section section section form'  
+     'section section section form'
      'footer footer footer footer ';
-     background-color: #FAD961; 
-    
+     background-color: #FAD961;
+
 }
 
 .navbar{
@@ -28,18 +28,18 @@ header{
     z-index: 1;
     text-align: center;
     background-color:#525252;
-    
-    
+
+
 }
 
 
 #navbar{
     position: relative;
     top: 5px;
-    
+
     margin: auto;
     border-radius: 12px;
-   
+
 }
 
 #section{
@@ -52,9 +52,9 @@ header{
     border: 2px solid #838383 ;
     box-shadow: -4px -4px 10px #414141;
     background-color: #fff000;
-background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%); 
+background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%);
 
-    
+
 }
 
 
@@ -67,15 +67,15 @@ background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%);
     width: 450px;
     border: 2px solid #838383 ;
     box-shadow: -4px -4px 10px #414141;
-    
     background-color: #f7b42c;
     background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
 
-
-    
 }
 
 
+span{
+    color: #e8e8e8;
+}
 
 #footer{
     grid-area: footer ;
@@ -86,19 +86,15 @@ background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%);
     background-color:#133b5c;
     color: #fcdab7;
     padding-top: 29px;
-    font-size: 20px;
-    
+    font-size: 1.2rem;
 }
-.navbar li{
 
-    
+.navbar li{
     display: inline-block;
-    
-    
     right: 45px;
     margin: 10px 29px;
     list-style: none;
-    
+
 }
 .navbar li a{
     position: relative;
@@ -117,28 +113,41 @@ background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%);
     padding: 75px 47px;
     margin: 60px;
     margin-left: 81px;
-    
+
 }
 .form button{
 
     margin: 5px 5px;
     padding: 5px 9px;
 }
-.form a{
+
+#lns{
     text-decoration: none;
-    margin: 0px 18px;
+    margin: 0px 14px;
     padding: 10px;
     font-size: 18px;
     color: black;
     position: relative;
-    top: -121px;
-    left: 105px;
-
+    top: 16px;
+    left: -26px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color:#ff004d;
+    background-color: #ff004d;
     color: honeydew;
+
 }
+.form form a input{
+    font-size: 17px;
+    color: white;
+    border-bottom: transparent;
+
+}
+.form form a input:hover{
+    border-bottom: transparent;
+
+}
+
+
 .form a:hover{
     color: #fc575e;
     background-color: white;
@@ -147,15 +156,17 @@ background-image: linear-gradient(315deg, #fff000 0%, #ed008c 74%);
 .form input{
     outline: none;
     background:none;
-    
+
     border: none;
     border-bottom:2px solid #363636;
 }
 .form input:hover{
     outline: none;
     border-bottom:4px solid #f74039;
-    
+
 }
+
+
 .form p{
     font-size: 18px;
     font-family: 'Overpass', sans-serif;
@@ -232,7 +243,6 @@ header img{
 }
 .party h4{
     position: relative;
-    top: 15px;
-    left: 15px;
+    top: 30px;
+    left: 13px;
 }
- 

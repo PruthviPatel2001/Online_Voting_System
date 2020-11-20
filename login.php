@@ -18,9 +18,9 @@ $result = $con->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting system</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="singin.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/singin.css">
+    <link rel="stylesheet" href="CSS/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;800&display=swap" rel="stylesheet">
 </head>
@@ -44,36 +44,32 @@ $result = $con->query($sql);
             
             <form>
                 <h3>User Details</h3>
+				
+				<p id="details">
 				<?php
                 if (mysqli_num_rows($result) > 0) {
 					// output data of each row 
 					while($row = mysqli_fetch_assoc($result)) {
 						if($idtemp==$row["voterid"]){
-						echo "Full-Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-						echo "Voter id:". $row["voterid"]."<br>";
-						echo "D.O.B:". $row["dob"]."<br>";
-						echo "Gender:". $row["gender"]."<br>";
-						echo "Contact No:". $row["contactno"]."<br>";
-						echo "Aadhar No:". $row["aadharno"]."<br>";
-						echo "Voted: ".$row["voted"]."<br>";
-						echo "Voted to: ".$row["votedto"]."<br>";
+						// echo "<span class='detail-title'> Full-Name:  </span> <h4> {$row["firstname"]}  {$row["lastname"]} </h4> <br>";
+						echo "<span class='detail-title'> Full-Name:  </span>" . $row["firstname"]. " " . $row["lastname"]. "<br>";
+
+						echo " <span class='detail-title'> Voter id:  </span>". $row["voterid"]."<br>";
+						echo " <span class='detail-title'> D.O.B:  </span>". $row["dob"]."<br>";
+						echo " <span class='detail-title'> Gender:  </span>". $row["gender"]."<br>";
+						echo " <span class='detail-title'> Contact No:  </span>". $row["contactno"]."<br>";
+						echo " <span class='detail-title'> Aadhar No:  </span>". $row["aadharno"]."<br>";
+						echo " <span class='detail-title'> Voted:  </span>".$row["voted"]."<br>";
+						echo " <span class='detail-title'> Voted to:  </span>".$row["votedto"]."<br>";
 						$votedtemp=$row["voted"];
 						}}
-					}
+					} 
 				?>
+				</p>
     
                  
             </form>
-            <a href="main.php" id="signout" style="
-                   color: red;
-                   text-decoration: none;
-                   position: relative;
-                   bottom: 183px;
-                   left: 170px;
-                   border: 2px solid;
-                   padding: 11px;
-                   width: 94px;
-               ">Sign Out </a>
+            <a href="main.php" id="sign-out">Sign Out </a>
             
 
         </div>
