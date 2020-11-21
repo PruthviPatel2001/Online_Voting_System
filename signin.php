@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/singin.css">
+    <link rel="stylesheet" href="CSS/signin.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;800&display=swap" rel="stylesheet">

@@ -30,7 +30,7 @@
 
             <p class="title"> Sign- In</p>
             <br>
-            <p> Step-1 Do register yourself by filling form in sing in section.</p>
+            <p> Step-1 Do register yourself by filling form in sign in section.</p>
             <br>
             <span> <p>Note- click sign in button to fill form and register yourself.</p> </span> 
             <br>

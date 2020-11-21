@@ -76,7 +76,7 @@ body{
     padding: 41px 51px;   
 }
 
-.singup input{
+.signup input{
     margin: 8px 0px;
     border: none;
     border-bottom: 2px solid red;
@@ -84,7 +84,7 @@ body{
     background: none;
        
 }
-.singup p{
+.signup p{
     display: inline-block;
     color:#444144;
     font-family: 'Overpass', sans-serif;
