@@ -32,13 +32,13 @@
             <br>
             <p> Step-1 Do register yourself by filling form in sign in section.</p>
             <br>
-            <span> <p>Note- click sign in button to fill form and register yourself.</p> </span> 
+            <span> <p>Note- click sign-in button to fill form and register yourself.</p> </span> 
             <br>
             <p class="title">Login</p>
             <br>
-            <p>Step-2 Login with your register <span>voter id number</span>  and <span>Password</span> . </p>
+            <p>Step-2 Login with your register <span>Voter id number</span>  and <span>Password</span> . </p>
             <br>
-            <span> <p>Note- click login in button to vote!</p> </span> 
+            <span> <p>Note- click login  button to vote!</p> </span> 
             <br>
             <P> <span> ""</span> After Login : On left side, your register Information is going to display check that.</P>
             <br>
