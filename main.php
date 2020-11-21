@@ -194,7 +194,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 <br><br>
 				<a id ="lns" href=""><input type="submit" value="Login"/></a>
 				
-                <a id="lns" href="singin.php">Sing In</a>
+                <a id="lns" href="signin.php">Sign In</a>
 
             </form>
 
