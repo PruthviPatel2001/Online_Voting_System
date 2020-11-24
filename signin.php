@@ -13,7 +13,7 @@
 <body>
 
 <?php
-$ageerr=$voteriderr=$contacterr=$aadharerr="";
+$ageerr=$voteriderr=$contacterr=$aadharerr=$votercounterr="";
     include 'dbcon.php';
    
     $fname=$lname=$dob=$age=$gender=$contact=$aadhar=$voterid=$password='';
@@ -50,7 +50,7 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
 
         if ($votercount>0) {
 
-            echo"voter id already register!!";
+            $votercounterr="voter id already register!!";
         }
         
         else{
@@ -83,8 +83,6 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
                     
                 }
 
-    
-
             }
             
             if($age<18){
@@ -100,8 +98,6 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
                 $aadharerr="*Aadhar NO. Should be of 12 Digit ";
             }
         }
-    
-    
     }
 
 ?>
@@ -111,6 +107,7 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
         <div class="navbar" id="navbar">
 
             <ul>
+
                 <li> <a href="main.php"> Home </a> </li>
                 <li> <a href="about_us.php">About Us </a> </li>
                 <li> <a href="guide.php"> Guide</a> </li>
@@ -129,23 +126,23 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
                <form action="signin.php"  method='POST'>
 
                    <p>First Name:</p>
-                   <a id="fn"><input type="text" name="fname" id="" placeholder=" Enter First name"></a>
+                   <a id="fn"><input type="text" name="fname" id="" placeholder=" Enter First name" required></a>
                    <br>
                    <br>
 
                    <p>Last Name: </p>
                 
-                   <a id="ln"><input type="text" name="lname" id="" placeholder="Enter Last name"></a>
+                   <a id="ln"><input type="text" name="lname" id="" placeholder="Enter Last name" required></a>
                    <br>
                    <br>
                    
-                    <p>D.O.B :</p>
-                   <a id="dd"><input type="date" name="dob" id="" placeholder="Enter DOB"></a>
+                   <p>D.O.B :</p>
+                   <a id="dd"><input type="date" name="dob" id="" placeholder="Enter DOB" required></a>
                    <br>
                    <br>
                    
                     <p>Age:</p>
-                    <a id="age"><input type="text" name="age" id="" placeholder="Enter Age"></a>
+                    <a id="age"><input type="text" name="age" id="" placeholder="Enter Age" required></a>
                     <span id="err1"><?php
                        echo $ageerr;
                     ?></span>
@@ -166,7 +163,7 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
                    <br>
                    <br>
                    <p>Contact No:</p>
-                   <a id="cnt"><input type="tel" name="contact" id="" placeholder="Enter 10 digit No."></a>
+                   <a id="cnt"><input type="tel" name="contact" id="" placeholder="Enter 10 digit No." required></a>
                     <span id="err2"><?php 
                       echo $contacterr;
                    ?></span>
@@ -174,7 +171,7 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
                    <br>
 
                    <p>Aadhar Card No.</p>
-                   <a id="adh"><input type="number" name="aadhar" id="" placeholder="Enter 12 digit No."></a>
+                   <a id="adh"><input type="number" name="aadhar" id="" placeholder="Enter 12 digit No." required></a>
                    <span id="err3"><?php
                       echo $aadharerr;
                    ?></span>
@@ -182,15 +179,16 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
                    <br>
 
                    <p>Voter I.D:</p>
-                   <a id="vi"><input type="number" name="voterid" id="" placeholder="Enter 10 digit No."></a>
+                   <a id="vi"><input type="number" name="voterid" id="" placeholder="Enter 10 digit No." required></a>
                    <span id="err4"><?php
                       echo $voteriderr;
+                      echo $votercounterr;
                    ?></span>
                    <br>
                    <br>
 
                    <p>Set password:</p>
-                   <a id="pass"><input type="password" name="pass" id="" placeholder="Set- Password"></a>
+                   <a id="pass"><input type="password" name="pass" id="" placeholder="Set- Password" required></a>
     
                     <button class="btn" type='submit' name='submit'>Register</button>
                     
@@ -199,8 +197,6 @@ $ageerr=$voteriderr=$contacterr=$aadharerr="";
     
         </div>
         
-
-
     </div>
 
     <footer>

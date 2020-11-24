@@ -54,7 +54,6 @@ $result = $con->query($sql);
 					// output data of each row 
 					while($row = mysqli_fetch_assoc($result)) {
 						if($idtemp==$row["voterid"]){
-						// echo "<span class='detail-title'> Full-Name:  </span> <h4> {$row["firstname"]}  {$row["lastname"]} </h4> <br>";
 						echo "<span class='detail-title'> Full-Name:  </span>" . $row["firstname"]. " " . $row["lastname"]. "<br>";
 
 						echo " <span class='detail-title'> Voter id:  </span>". $row["voterid"]."<br>";
