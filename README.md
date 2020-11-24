@@ -8,3 +8,7 @@ Online Voting System .Which let you to vote to  for ongoing election.
 
 # You Are All Set TO to Run This Project<br/>
 Tip~ Start with 'main.php' file
+
+### Note : Website is not responsive. So If Any change required Use CSS files.
+
+Happy Coding!!.
